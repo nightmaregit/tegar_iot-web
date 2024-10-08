@@ -76,6 +76,11 @@ function ControlLampu() {
   const handleLogout = async () => {
     try {
       await signOut(auth);
+      Swal.fire({
+        icon: "success",
+        title: `LogOut Berhasil`,
+        confirmButtonText: "OK",
+      });
       navigate("/");
     } catch (error) {
       console.error("Error during logout: ", error);
