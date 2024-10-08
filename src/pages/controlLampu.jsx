@@ -53,7 +53,6 @@ function ControlLampu() {
     async (room) => {
       try {
         const lampRef = ref(db, `Lampu/${room}`);
-        console.log(room);
 
         await set(lampRef, !lights[room]);
       } catch (error) {
