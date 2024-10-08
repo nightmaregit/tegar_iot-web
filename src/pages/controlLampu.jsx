@@ -93,8 +93,6 @@ function ControlLampu() {
       </Flex>
     );
   }
-  console.log(Object.entries(lights));
-
   return (
     <Flex
       minH="100vh"
