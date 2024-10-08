@@ -37,7 +37,6 @@ function LoginPage() {
         password
       );
       const akun = userCredential.user;
-      document.cookie = `userToken=${akun.stsTokenManager.accessToken}; SameSite=None; Secure`;
       Swal.fire({
         icon: "success",
         title: `Login Berhasil`,
