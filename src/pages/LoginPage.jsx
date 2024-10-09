@@ -67,7 +67,7 @@ function LoginPage() {
           ? "linear(to-r, blue.500, purple.600)"
           : "linear(to-r, gray.800, gray.900)"
       } // Sesuaikan gradien berdasarkan mode
-      p={{ base: "8", md: "8" }} // Padding responsif
+      p={{ base: "4", md: "8" }} // Padding responsif
       position="relative"
     >
       {/* Tombol untuk Toggle Dark/Light Mode */}
