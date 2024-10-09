@@ -67,6 +67,7 @@ function LoginPage() {
           ? "linear(to-r, blue.500, purple.600)"
           : "linear(to-r, gray.800, gray.900)"
       } // Sesuaikan gradien berdasarkan mode
+      p={{ base: "4", md: "8" }} // Padding responsif
       position="relative"
     >
       {/* Tombol untuk Toggle Dark/Light Mode */}
@@ -85,21 +86,22 @@ function LoginPage() {
 
       <Box
         w="full"
-        maxW="md"
-        p={8}
+        maxW={{ base: "sm", md: "md", lg: "lg" }} // Responsif untuk ukuran kotak
+        p={{ base: "6", md: "8" }} // Padding untuk box
         bg={colorMode === "light" ? "white" : "gray.700"} // Sesuaikan warna box
         color={colorMode === "light" ? "gray.900" : "white"}
         rounded="xl"
         shadow="2xl"
-        transform
         transition="all"
         _hover={{ transform: "scale(1.05)" }}
       >
         <Center flexDir="column" mb={6}>
-          <Heading as="h1" size="2xl">
+          <Heading as="h1" size={{ base: "xl", md: "2xl" }}>
             Welcome Back
           </Heading>
-          <Text mt={2}>Sign in to control your smart home</Text>
+          <Text mt={2} fontSize={{ base: "sm", md: "md" }}>
+            Sign in to control your smart home
+          </Text>
         </Center>
 
         {error && <Text color="red.500">{error}</Text>}
@@ -113,6 +115,7 @@ function LoginPage() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               bg={colorMode === "light" ? "gray.100" : "gray.600"} // Warna input sesuai mode
+              size={{ base: "sm", md: "md" }} // Ukuran input responsif
             />
           </FormControl>
           <FormControl id="password" mb={6}>
@@ -122,6 +125,7 @@ function LoginPage() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               bg={colorMode === "light" ? "gray.100" : "gray.600"} // Warna input sesuai mode
+              size={{ base: "sm", md: "md" }} // Ukuran input responsif
             />
           </FormControl>
           <Button
@@ -131,6 +135,7 @@ function LoginPage() {
             type="submit"
             isDisabled={loading} // Disable button saat loading
             _hover={{ bg: colorMode === "light" ? "gray.800" : "purple.600" }} // Hover sesuai mode
+            size={{ base: "sm", md: "md" }} // Ukuran button responsif
           >
             {loading ? <Spinner size="sm" /> : "Sign In"}
           </Button>
