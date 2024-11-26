@@ -57,7 +57,6 @@ function ControlLampu() {
         await set(lampRef, !lights[room]);
       } catch (error) {
         const user = auth.currentUser;
-        console.log("con", user);
         if (user && user.email !== "coba@gmail.com") {
           Swal.fire({
             icon: "error",
@@ -132,7 +131,7 @@ function ControlLampu() {
             size={headingSize}
             color={colorMode === "light" ? "gray.800" : "white"}
           >
-            Smart Home
+            Smart Home {auth.currentUser}
           </Heading>
           <Flex gap={4}>
             <IconButton
