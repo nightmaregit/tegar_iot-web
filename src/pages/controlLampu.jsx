@@ -39,7 +39,6 @@ function ControlLampu() {
     const lampuRef = ref(db, "Lampu");
     const unsubscribe = onValue(lampuRef, (snapshot) => {
       const data = snapshot.val();
-      console.log("con :",data.email);
       if (data) {
         setLights(data);
       }
@@ -58,6 +57,7 @@ function ControlLampu() {
         await set(lampRef, !lights[room]);
       } catch (error) {
         const user = auth.currentUser;
+        console.log("con", user);
         if (user && user.email !== "coba@gmail.com") {
           Swal.fire({
             icon: "error",
