@@ -131,7 +131,7 @@ function ControlLampu() {
             size={headingSize}
             color={colorMode === "light" ? "gray.800" : "white"}
           >
-            Smart Home {auth.currentUser.email}
+            {auth.currentUser.email}
           </Heading>
           <Flex gap={4}>
             <IconButton
