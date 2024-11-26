@@ -39,7 +39,7 @@ function ControlLampu() {
     const lampuRef = ref(db, "Lampu");
     const unsubscribe = onValue(lampuRef, (snapshot) => {
       const data = snapshot.val();
-      console.log(data);
+      console.log("con :",data.email);
       if (data) {
         setLights(data);
       }
