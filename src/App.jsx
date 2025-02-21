@@ -5,6 +5,7 @@ import { ChakraProvider, ColorModeScript } from "@chakra-ui/react"; // Tambahkan
 import theme from "./them"; // Import tema yang akan kita buat
 import LoginPage from "./pages/LoginPage";
 import ControlLampu from "./pages/controlLampu";
+import ControlKipas from "./pages/controlKipas";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -27,6 +28,10 @@ function App() {
           <Route
             path="/controlLampu"
             element={user ? <ControlLampu /> : <LoginPage />} // Jika user belum login, arahkan ke login
+          />
+          <Route
+            path="/controlKipas"
+            element={user ? <ControlKipas /> : <LoginPage />} // Jika user belum login, arahkan ke login
           />
         </Routes>
       </Router>

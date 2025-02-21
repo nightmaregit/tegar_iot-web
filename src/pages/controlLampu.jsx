@@ -170,7 +170,7 @@ function ControlLampu() {
               align="center"
               flexWrap="wrap"
               justify="space-between"
-              w={{ base: "full", md: "48%" }}
+              w={{ base: "full", md: lights.length === 1 ? "full" : "48%" }}
               _hover={{
                 transform: "translateY(-2px)",
                 boxShadow: "md",
