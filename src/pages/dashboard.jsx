@@ -253,6 +253,7 @@ function Dashboard() {
                       Temperature
                     </Text>
                     <GaugeChart
+                      w="200px"
                       id="temperature-gauge"
                       nrOfLevels={10}
                       hideText={true}
