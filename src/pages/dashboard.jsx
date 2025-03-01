@@ -247,13 +247,13 @@ function Dashboard() {
                     bg={colorMode === "light" ? "gray.100" : "gray.800"}
                     rounded="2xl"
                     shadow="lg"
+                    w={{ base: "230px" }}
                     textAlign="center"
                   >
                     <Text fontSize="lg" fontWeight="bold" mb={2}>
                       Temperature
                     </Text>
                     <GaugeChart
-                      w="200px"
                       id="temperature-gauge"
                       nrOfLevels={10}
                       hideText={true}
