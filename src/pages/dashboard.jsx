@@ -247,7 +247,7 @@ function Dashboard() {
                     bg={colorMode === "light" ? "gray.100" : "gray.800"}
                     rounded="2xl"
                     shadow="lg"
-                    w={{ base: "230px" }}
+                    w={{ base: "200px", md: "full" }}
                     textAlign="center"
                   >
                     <Text fontSize="lg" fontWeight="bold" mb={2}>
@@ -275,7 +275,7 @@ function Dashboard() {
                     bg={colorMode === "light" ? "gray.100" : "gray.800"}
                     rounded="2xl"
                     shadow="lg"
-                    w={{ base: "230px" }}
+                    w={{ base: "200px", md: "full" }}
                     textAlign="center"
                   >
                     <Text fontSize="lg" fontWeight="bold" mb={2}>
