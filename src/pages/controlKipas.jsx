@@ -57,9 +57,10 @@ function ControlKipas() {
       });
 
       const unsubscribeSpeed = onValue(speedRef, (snapshot) => {
+        const speedValue = snapshot.val();
         setFanStates((prev) => ({
           ...prev,
-          [fan]: { ...prev[fan], speed: snapshot.val() },
+          [fan]: { ...prev[fan], speed: Math.round((speedValue / 180) * 100) },
         }));
       });
 
@@ -78,8 +79,9 @@ function ControlKipas() {
   };
 
   const handleSpeedChange = async (fan, value) => {
+    const speedValue = Math.round((value * 180) / 100); // Konversi ke skala 0-180
     const speedRef = ref(db, `Kipas/kecepatan${fan}`);
-    await set(speedRef, value);
+    await set(speedRef, speedValue);
     setFanStates((prev) => ({
       ...prev,
       [fan]: { ...prev[fan], speed: value },
