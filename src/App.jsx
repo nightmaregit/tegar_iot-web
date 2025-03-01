@@ -6,6 +6,7 @@ import theme from "./them"; // Import tema yang akan kita buat
 import LoginPage from "./pages/LoginPage";
 import ControlLampu from "./pages/controlLampu";
 import ControlKipas from "./pages/controlKipas";
+import Dashboard from "./pages/dashboard";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -24,7 +25,11 @@ function App() {
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />
       <Router>
         <Routes>
-          <Route path="/" element={<LoginPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route
+            path="/"
+            element={user ? <Dashboard /> : <LoginPage />} // Jika user belum login, arahkan ke login
+          />
           <Route
             path="/controlLampu"
             element={user ? <ControlLampu /> : <LoginPage />} // Jika user belum login, arahkan ke login

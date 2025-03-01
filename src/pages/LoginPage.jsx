@@ -44,7 +44,7 @@ function LoginPage() {
         confirmButtonText: "OK",
       });
       setLoading(false); // Berhenti loading
-      navigate("/controlLampu");
+      navigate("/");
     } catch (err) {
       setLoading(false); // Berhenti loading
       Swal.fire({
