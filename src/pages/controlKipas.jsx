@@ -74,6 +74,18 @@ function ControlKipas() {
   }, []);
 
   const toggleFan = async (fan) => {
+    try {
+      const fanRef = ref(db, `Kipas/${fan}`);
+      await set(fanRef, !fanStates[fan]?.isOn);
+    } catch (er) {
+      Swal.fire({
+        icon: "error",
+        title: `Tidak dapat menyalakan `,
+        text: "Anda tidak login menggunakan akun pemilik rumah",
+        footer: er.message,
+        confirmButtonText: "OK",
+      });
+    }
     const fanRef = ref(db, `Kipas/${fan}`);
     await set(fanRef, !fanStates[fan]?.isOn);
   };

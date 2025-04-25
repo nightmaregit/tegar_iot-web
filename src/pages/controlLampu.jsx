@@ -62,18 +62,14 @@ function ControlLampu() {
 
         await set(lampRef, !lights[room]);
       } catch (error) {
-        const user = auth.currentUser;
-        if (user && user.email !== "coba@gmail.com") {
-          Swal.fire({
-            icon: "error",
-            title: `Tidak dapat menyalakan Ruangan ${room}`,
-            text: "Anda tidak login menggunakan akun pemilik rumah",
-            footer: error.message,
-            confirmButtonText: "OK",
-          });
-        } else {
-          console.error(`Error toggling light for ${room}: `, error);
-        }
+        // const user = auth.currentUser;
+        Swal.fire({
+          icon: "error",
+          title: `Tidak dapat menyalakan`,
+          text: "Anda tidak login menggunakan akun pemilik rumah",
+          footer: error.message,
+          confirmButtonText: "OK",
+        });
       }
     },
     [lights]
