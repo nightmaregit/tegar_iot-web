@@ -254,7 +254,8 @@ function ControlLampu() {
                     fontWeight="bold"
                     color={colorMode === "light" ? "gray.800" : "white"}
                   >
-                    {`Ruang ${room.charAt(0).toUpperCase() + room.slice(1)}`}
+                    {room == "dapur" ? "Lampu Depan" : "Lampu Belakang"}
+                    {/* {`Ruang ${room.charAt(0).toUpperCase() + room.slice(1)}`} */}
                   </Text>
                   <Box
                     onClick={(e) => {

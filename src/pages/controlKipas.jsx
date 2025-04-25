@@ -208,7 +208,7 @@ function ControlKipas() {
               textAlign="center"
               color={colorMode === "light" ? "gray.800" : "white"}
             >
-              Kontrol Lampu {userName}
+              Kontrol Kipas {userName}
             </Heading>
 
             <Flex gap={4}>
@@ -255,9 +255,10 @@ function ControlKipas() {
                     fontWeight="bold"
                     color={colorMode === "light" ? "gray.800" : "white"}
                   >
-                    {fan
+                    {fan == "kamar" ? "Kipas1" : "iya"}
+                    {/* {fan
                       .replace(/([A-Z])/g, " $1")
-                      .replace(/^./, (str) => str.toUpperCase())}
+                      .replace(/^./, (str) => str.toUpperCase())} */}
                   </Text>
                   <Switch
                     isChecked={fanStates[fan]?.isOn}
