@@ -177,7 +177,8 @@ function Dashboard() {
               textAlign="center"
               color={colorMode === "light" ? "gray.800" : "white"}
             >
-              Selamat datang, {userName}!
+              Selamat datang,{" "}
+              {userName == "coba@gmail.com" ? "mardi@gmail.com" : userName}!
             </Heading>
             <Flex gap={4}>
               <IconButton

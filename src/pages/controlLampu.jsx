@@ -201,7 +201,9 @@ function ControlLampu() {
               textAlign="center"
               color={colorMode === "light" ? "gray.800" : "white"}
             >
-              Kontrol Lampu {userName}
+              {/* Kontrol Lampu {userName} */}
+              Kontrol Lampu{" "}
+              {userName == "coba@gmail.com" ? "mardi@gmail.com" : userName}
             </Heading>
             <Flex gap={4}>
               <IconButton

@@ -208,7 +208,9 @@ function ControlKipas() {
               textAlign="center"
               color={colorMode === "light" ? "gray.800" : "white"}
             >
-              Kontrol Kipas {userName}
+              {/* Kontrol Kipas {userName} */}
+              Kontrol Kipas{" "}
+              {userName == "coba@gmail.com" ? "mardi@gmail.com" : userName}
             </Heading>
 
             <Flex gap={4}>
